@@ -4,12 +4,16 @@ public class Employee {
     private int id;
     private String name;
     private String email;
-    private String enterprise;
-    private String rol;
+    private Enterprise enterprise;
+    private Rol rol;
     private Date updatedAt;
     private Date createdAt;
 
-    public Employee(int id, String name, String email, String enterprise, String rol, Date updatedAt, Date createdAt) {
+    enum Rol{
+        operativo, administrador;
+    }
+
+    public Employee(int id, String name, String email, Enterprise enterprise, Rol rol, Date updatedAt, Date createdAt) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -43,19 +47,19 @@ public class Employee {
         this.email = email;
     }
 
-    public String getEnterprise() {
+    public Enterprise getEnterprise() {
         return enterprise;
     }
 
-    public void setEnterprise(String enterprise) {
+    public void setEnterprise(Enterprise enterprise) {
         this.enterprise = enterprise;
     }
 
-    public String getRol() {
+    public Rol getRol() {
         return rol;
     }
 
-    public void setRol(String rol) {
+    public void setRol(Rol rol) {
         this.rol = rol;
     }
 
