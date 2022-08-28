@@ -3,11 +3,15 @@ public class MovimientoDinero {
     private int id;
     private String concept;
     private float amount;
+    private String user;
 
-    public MovimientoDinero(int id, String concept, float amount) {
+
+    public MovimientoDinero(int id, String concept, float amount, String user) {
+
         this.id = id;
         this.concept = concept;
         this.amount = amount;
+        this.user = user;
     }
 
     public int getId() {
@@ -32,5 +36,13 @@ public class MovimientoDinero {
 
     public void setAmount(float amount) {
         this.amount = amount;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }
